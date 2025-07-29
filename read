@@ -1,0 +1,56 @@
+npm install --- install node modules...
+
+To run this code:
+
+Type 
+node app.js -- in the terminal
+
+
+Curl command for testing 
+
+
+For registering user windows
+
+
+
+curl -X POST http://localhost:5000/api/auth/register ^
+-H "Content-Type: application/json" ^
+-d "{\"name\":\"Bob\",\"email\":\"bob@example.com\",\"password\":\"password123\",\"isAdmin\":false}"
+
+
+For linux/Unix
+curl -X POST http://localhost:5000/api/auth/register \
+-H "Content-Type: application/json" \
+-d '{"name":"Bob","email":"bob@example.com","password":"password123","isAdmin":false}'
+
+
+For login user
+
+for windows
+
+curl -X POST http://localhost:5000/api/auth/login ^
+-H "Content-Type: application/json" ^
+-d "{\"email\":\"alice@example.com\",\"password\":\"password123\"}"
+
+
+For Unix/linux/mac
+curl -X POST http://localhost:5000/api/auth/login \
+-H "Content-Type: application/json" \
+-d '{"email":"alice@example.com","password":"password123"}'
+
+
+
+For adding medicine
+For windows 
+curl -X POST http://localhost:5000/api/medicines ^
+-H "Content-Type: application/json" ^
+-H "Authorization: Bearer YOUR_ADMIN_JWT_TOKEN" ^
+-d "{\"name\":\"Paracetamol\",\"brand\":\"ACME\",\"price\":15,\"stockQuantity\":100}"
+
+
+For unix/Linux
+curl -X POST http://localhost:5000/api/auth/register \
+-H "Content-Type: application/json" \
+-d '{"name":"Bob","email":"bob@example.com","password":"password123","isAdmin":false}'
+
+here...We will gett authentication when login and for login the above command provided.
